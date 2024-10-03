@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+}
+
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px; 
+    background-color: #606460; 
+    color: white; 
+}
+
+.header-logo img {
+    height: 50px;
+}
+
+.header-title h1 {
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+
+.main-intro {
+    display: flex; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #f0f0f0; 
+    border-bottom: 2px solid #ccc; 
+}
+
+.intro-image {
+    flex: 0 0 30%; /* Set width to 30% */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.intro-image img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+}
+
+.intro-text {
+    flex: 0 0 70%; 
+    padding: 20px; 
+}
+
+.intro-text h1,
+.phylum-details h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 10px;
+}
+
+.intro-text h3,
+.intro-text p {
+    margin-bottom: 15px; 
+}
+
+.classfication-director {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 10px;
+}
+
+.navbar-item {
+    background-color: #f8f8f8; 
+    border: 1px solid #ddd; 
+    padding: 15px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    width: 100%;
+    flex: 1 0 200px; 
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar-item:hover {
+    background-color: #e0e0e0; 
+    transform: translateY(-3px); 
+}
+
+.navbar-item a {
+    text-decoration: none; 
+    color: #333; 
+}
+
+.navbar-item h5 {
+    margin: 0; 
+    text-align: center;
+}
+
+.oddsection,
+.evensection {
+    display: flex; 
+    align-items: center; 
+    margin: 20px 0;
+}
+
+.oddsection {
+    background-color: #f2f2f2; 
+}
+
+.evensection {
+    background-color: #e6e6e6; 
+    flex-direction: row-reverse; 
+}
+
+.phylum-image {
+    flex: 0 0 30%; 
+    padding: 10px; 
+}
+
+.phylum-image img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.phylum-text {
+    flex: 1; 
+    padding: 0 15px; 
+}
+
+.phylum-text h2 {
+    font-size: 1.8rem; 
+    margin-bottom: 10px; 
+}
+
+.phylum-text p {
+    margin-bottom: 10px; 
+}
+
+.fun-fact {
+    padding: 20px;
+    text-align: center; 
+    background-color: #fff;
+    border-top: 2px solid #ccc; 
+}
+
+.fun-fact h3 {
+    margin-bottom: 10px; 
+}
+
+.fun-fact a {
+    text-decoration: none; 
+    color: #007BFF; 
+}
+
+footer {
+    text-align: center; 
+    padding: 10px; 
+    background-color: #f0f0f0; 
+    border-top: 2px solid #ccc; 
+}
+
+.fucn-fact-click p {
+    
+    color: red; 
+    animation: colorChange 1s infinite; 
+    cursor: pointer; 
+}
+
+@keyframes colorChange {
+    0% {
+        color: red; 
+    }
+    50% {
+        color: blue; 
+    }
+    100% {
+        color: red; 
+    }
+}
+
+
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top right, #c4e3f0, #d7b78c);
+}
+
+.video-container iframe {
+    width: 100%; 
+    height: 500px; 
+    max-width: 800px; 
+    border: none; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-intro {
+        flex-direction: column; /* Stack items vertically */
+        padding: 15px; /
+    }
+
+    .intro-image,
+    .intro-text {
+        flex: 1 0 auto; /* Allow both to take full width */
+        text-align: center;
+        width: 100%; 
+    }
+
+    .navbar-item {
+        flex: 1 0 100%; 
+        margin: 5px 0; 
+    }
+
+    .phylum-image {
+        flex: 1 0 100%; 
+        margin: 10px 0; 
+    }
+
+    .oddsection,
+    .evensection {
+        flex-direction: column; 
+    }
+
+    .phylum-text {
+        padding: 0; 
+        text-align: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 2rem; 
+    }
+
+    .intro-text h3,
+    .intro-text p {
+        font-size: 0.9rem; 
+    }
+
+    .navbar-item h5 {
+        font-size: 0.9rem; 
+    }
+
+    .phylum-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .fun-fact h3 {
+        font-size: 1.2rem; 
+    }
+}
